@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zemota Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e3f2fd;
+        }
+        .header {
+            background: #0277bd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            flex-direction: column;
+        }
+        .button {
+            background: #ff6f00;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .button:hover {
+            background: #020101;
+            transform: scale(1.1);
+        }
+        .features {
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+        }
+        .feature-box {
+            background: rgb(182, 138, 138);
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        .menu {
+            display: none;
+            background: rgb(117, 9, 9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to  Restaurant</h1>
+    </div>
+    <div class="container">
+        <h2>Your gateway to innovative solutions</h2>
+        <p>We bring cutting-edge technology to simplify your work.</p>
+        <a href="#" class="button" id="exploreBtn">Explore Now</a>
+    </div>
+    <div class="menu" id="foodMenu">
+        <h3>Food Menu</h3>
+        <ul>
+            <li>Pizza</li>
+            <li>Burger</li>
+            <li>Pasta</li>
+            <li>Salad</li>
+            <li>Desserts</li>
+        </ul>
+    </div>
+    <div class="features">
+        <div class="feature-box">
+            <h3>Feature One</h3>
+            <p>High-quality services tailored for you.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Feature Two</h3>
+            <p>Seamless integration with modern tools.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Feature Three</h3>
+            <p>Dedicated support to assist you anytime.</p>
+        </div>
+    </div>
+    <script>
+        document.querySelector('#exploreBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#foodMenu').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
